@@ -1,4 +1,5 @@
 import { useCallback, useRef, useState } from 'react';
+import ChordAmGuide from './ChordAmGuide';
 import { Play, Square, Mic, MicOff, RotateCcw, CheckCircle, Music2, Waves, Volume2, Loader2 } from 'lucide-react';
 import {
   useStringDetector,
@@ -1667,6 +1668,7 @@ type PracticeMode = 'strum' | 'pluck';
 // ── App ────────────────────────────────────────────────────────────────────
 export default function App() {
   const [activeIdx, setActiveIdx]   = useState(0);
+  const [showAmGuide, setShowAmGuide] = useState(false);
   const [filter, setFilter]         = useState<FilterTag>('all');
   const [mode, setMode]             = useState<PracticeMode>('pluck');
 
@@ -1808,6 +1810,21 @@ export default function App() {
               ? <ChordPractice key={activeChord.name + '-pluck'} chord={activeChord} />
               : <StrumPractice key={activeChord.name + '-strum'} chord={activeChord} />
             }
+            {activeChord.name === 'Am' && (
+              <div style={{ marginTop: 24, display: 'flex', justifyContent: 'center' }}>
+                <button
+                  onClick={() => setShowAmGuide(true)}
+                  style={{
+                    display: 'flex', alignItems: 'center', gap: 8,
+                    background: 'rgba(251,191,36,0.12)', border: '1.5px solid #92400e',
+                    color: '#f59e0b', borderRadius: 12, padding: '12px 24px',
+                    fontSize: 14, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit',
+                  }}
+                >
+                  📖 Học bấm hợp âm Am
+                </button>
+              </div>
+            )}
           </div>
         </main>
       </div>
@@ -1912,8 +1929,26 @@ export default function App() {
             ? <ChordPractice key={activeChord.name + '-pluck'} chord={activeChord} />
             : <StrumPractice key={activeChord.name + '-strum'} chord={activeChord} />
           }
+          {activeChord.name === 'Am' && (
+            <div style={{ marginTop: 20, paddingBottom: 20, display: 'flex', justifyContent: 'center' }}>
+              <button
+                onClick={() => setShowAmGuide(true)}
+                style={{
+                  display: 'flex', alignItems: 'center', gap: 8,
+                  background: 'rgba(251,191,36,0.12)', border: '1.5px solid #92400e',
+                  color: '#f59e0b', borderRadius: 12, padding: '12px 24px',
+                  fontSize: 14, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit',
+                }}
+              >
+                📖 Học bấm hợp âm Am
+              </button>
+            </div>
+          )}
         </div>
       </div>
+
+      {/* Am chord guide modal */}
+      {showAmGuide && <ChordAmGuide onClose={() => setShowAmGuide(false)} />}
     </div>
   );
 }
