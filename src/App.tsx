@@ -228,8 +228,8 @@ const ALL_CHORDS: ChordConfig[] = [
     doneText: 'Bạn đã rải đúng hợp âm B7!',
     strings: [
       { label: 'E', noteLabel: 'E2',  muted: true,  open: false, fret: 0, finger: null, seqIdx: -1 },
-      { label: 'A', noteLabel: 'B2',  muted: false, open: false, fret: 2, finger: '1',  seqIdx: 0 },
-      { label: 'D', noteLabel: 'D#3', muted: false, open: false, fret: 2, finger: '2',  seqIdx: 1 },
+      { label: 'A', noteLabel: 'B2',  muted: false, open: false, fret: 2, finger: '2',  seqIdx: 0 },
+      { label: 'D', noteLabel: 'D#3', muted: false, open: false, fret: 1, finger: '1',  seqIdx: 1 },
       { label: 'G', noteLabel: 'A3',  muted: false, open: false, fret: 2, finger: '3',  seqIdx: 2 },
       { label: 'B', noteLabel: 'B3',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 3 },
       { label: 'e', noteLabel: 'F#4', muted: false, open: false, fret: 2, finger: '4',  seqIdx: 4 },
