@@ -37,20 +37,21 @@ interface ChordConfig {
   startFret?: number;
 }
 
-// ── 14 basic chords ────────────────────────────────────────────────────────
+// ── Chords — thứ tự theo lộ trình học: 6 cơ bản trước, rồi mới đến nâng cao ──
 const ALL_CHORDS: ChordConfig[] = [
-  // ── E major: 022100 ──
+  // ══ 6 HỢP ÂM CƠ BẢN (học trước) ══════════════════════════════════════════
+  // ── Am: x02210 ──
   {
-    name: 'E', viName: 'Mi trưởng', type: 'MAJOR · E–G#–B', tag: 'major',
-    sequence: E_SEQUENCE,
-    doneText: 'Bạn đã rải đúng hợp âm E!',
+    name: 'Am', viName: 'La thứ', type: 'MINOR · A–C–E', tag: 'minor',
+    sequence: AM_SEQUENCE,
+    doneText: 'Bạn đã rải đúng hợp âm Am!',
     strings: [
-      { label: 'E', noteLabel: 'E2',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 0 },
-      { label: 'A', noteLabel: 'B2',  muted: false, open: false, fret: 2, finger: '3',  seqIdx: 1 },
-      { label: 'D', noteLabel: 'E3',  muted: false, open: false, fret: 2, finger: '2',  seqIdx: 2 },
-      { label: 'G', noteLabel: 'G#3', muted: false, open: false, fret: 1, finger: '1',  seqIdx: 3 },
-      { label: 'B', noteLabel: 'B3',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 4 },
-      { label: 'e', noteLabel: 'E4',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 5 },
+      { label: 'E', noteLabel: 'E2',  muted: true,  open: false, fret: 0, finger: null, seqIdx: -1 },
+      { label: 'A', noteLabel: 'A2',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 0 },
+      { label: 'D', noteLabel: 'E3',  muted: false, open: false, fret: 2, finger: '2',  seqIdx: 1 },
+      { label: 'G', noteLabel: 'A3',  muted: false, open: false, fret: 2, finger: '3',  seqIdx: 2 },
+      { label: 'B', noteLabel: 'C4',  muted: false, open: false, fret: 1, finger: '1',  seqIdx: 3 },
+      { label: 'e', noteLabel: 'E4',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 4 },
     ],
   },
   // ── Em: 022000 ──
@@ -67,46 +68,18 @@ const ALL_CHORDS: ChordConfig[] = [
       { label: 'e', noteLabel: 'E4',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 5 },
     ],
   },
-  // ── A major: x02220 ──
+  // ── C major: x32010 ──
   {
-    name: 'A', viName: 'La trưởng', type: 'MAJOR · A–C#–E', tag: 'major',
-    sequence: A_SEQUENCE,
-    doneText: 'Bạn đã rải đúng hợp âm A!',
+    name: 'C', viName: 'Đô trưởng', type: 'MAJOR · C–E–G', tag: 'major',
+    sequence: C_SEQUENCE,
+    doneText: 'Bạn đã rải đúng hợp âm C!',
     strings: [
       { label: 'E', noteLabel: 'E2',  muted: true,  open: false, fret: 0, finger: null, seqIdx: -1 },
-      { label: 'A', noteLabel: 'A2',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 0 },
-      { label: 'D', noteLabel: 'E3',  muted: false, open: false, fret: 2, finger: '1',  seqIdx: 1 },
-      { label: 'G', noteLabel: 'A3',  muted: false, open: false, fret: 2, finger: '2',  seqIdx: 2 },
-      { label: 'B', noteLabel: 'C#4', muted: false, open: false, fret: 2, finger: '3',  seqIdx: 3 },
-      { label: 'e', noteLabel: 'E4',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 4 },
-    ],
-  },
-  // ── Am: x02210 ──
-  {
-    name: 'Am', viName: 'La thứ', type: 'MINOR · A–C–E', tag: 'minor',
-    sequence: AM_SEQUENCE,
-    doneText: 'Bạn đã rải đúng hợp âm Am!',
-    strings: [
-      { label: 'E', noteLabel: 'E2',  muted: true,  open: false, fret: 0, finger: null, seqIdx: -1 },
-      { label: 'A', noteLabel: 'A2',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 0 },
+      { label: 'A', noteLabel: 'C3',  muted: false, open: false, fret: 3, finger: '3',  seqIdx: 0 },
       { label: 'D', noteLabel: 'E3',  muted: false, open: false, fret: 2, finger: '2',  seqIdx: 1 },
-      { label: 'G', noteLabel: 'A3',  muted: false, open: false, fret: 2, finger: '3',  seqIdx: 2 },
+      { label: 'G', noteLabel: 'G3',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 2 },
       { label: 'B', noteLabel: 'C4',  muted: false, open: false, fret: 1, finger: '1',  seqIdx: 3 },
       { label: 'e', noteLabel: 'E4',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 4 },
-    ],
-  },
-  // ── D major: xx0232 ──
-  {
-    name: 'D', viName: 'Rê trưởng', type: 'MAJOR · D–F#–A', tag: 'major',
-    sequence: D_SEQUENCE,
-    doneText: 'Bạn đã rải đúng hợp âm D!',
-    strings: [
-      { label: 'E', noteLabel: 'E2',  muted: true,  open: false, fret: 0, finger: null, seqIdx: -1 },
-      { label: 'A', noteLabel: 'A2',  muted: true,  open: false, fret: 0, finger: null, seqIdx: -1 },
-      { label: 'D', noteLabel: 'D3',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 0 },
-      { label: 'G', noteLabel: 'A3',  muted: false, open: false, fret: 2, finger: '1',  seqIdx: 1 },
-      { label: 'B', noteLabel: 'D4',  muted: false, open: false, fret: 3, finger: '3',  seqIdx: 2 },
-      { label: 'e', noteLabel: 'F#4', muted: false, open: false, fret: 2, finger: '2',  seqIdx: 3 },
     ],
   },
   // ── Dm: xx0231 ──
@@ -137,18 +110,47 @@ const ALL_CHORDS: ChordConfig[] = [
       { label: 'e', noteLabel: 'G4',  muted: false, open: false, fret: 3, finger: '4',  seqIdx: 5 },
     ],
   },
-  // ── C major: x32010 ──
+  // ── E major: 022100 ──
   {
-    name: 'C', viName: 'Đô trưởng', type: 'MAJOR · C–E–G', tag: 'major',
-    sequence: C_SEQUENCE,
-    doneText: 'Bạn đã rải đúng hợp âm C!',
+    name: 'E', viName: 'Mi trưởng', type: 'MAJOR · E–G#–B', tag: 'major',
+    sequence: E_SEQUENCE,
+    doneText: 'Bạn đã rải đúng hợp âm E!',
+    strings: [
+      { label: 'E', noteLabel: 'E2',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 0 },
+      { label: 'A', noteLabel: 'B2',  muted: false, open: false, fret: 2, finger: '3',  seqIdx: 1 },
+      { label: 'D', noteLabel: 'E3',  muted: false, open: false, fret: 2, finger: '2',  seqIdx: 2 },
+      { label: 'G', noteLabel: 'G#3', muted: false, open: false, fret: 1, finger: '1',  seqIdx: 3 },
+      { label: 'B', noteLabel: 'B3',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 4 },
+      { label: 'e', noteLabel: 'E4',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 5 },
+    ],
+  },
+  // ══ HỢP ÂM NÂNG CAO ═══════════════════════════════════════════════════════
+  // ── A major: x02220 ──
+  {
+    name: 'A', viName: 'La trưởng', type: 'MAJOR · A–C#–E', tag: 'major',
+    sequence: A_SEQUENCE,
+    doneText: 'Bạn đã rải đúng hợp âm A!',
     strings: [
       { label: 'E', noteLabel: 'E2',  muted: true,  open: false, fret: 0, finger: null, seqIdx: -1 },
-      { label: 'A', noteLabel: 'C3',  muted: false, open: false, fret: 3, finger: '3',  seqIdx: 0 },
-      { label: 'D', noteLabel: 'E3',  muted: false, open: false, fret: 2, finger: '2',  seqIdx: 1 },
-      { label: 'G', noteLabel: 'G3',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 2 },
-      { label: 'B', noteLabel: 'C4',  muted: false, open: false, fret: 1, finger: '1',  seqIdx: 3 },
+      { label: 'A', noteLabel: 'A2',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 0 },
+      { label: 'D', noteLabel: 'E3',  muted: false, open: false, fret: 2, finger: '1',  seqIdx: 1 },
+      { label: 'G', noteLabel: 'A3',  muted: false, open: false, fret: 2, finger: '2',  seqIdx: 2 },
+      { label: 'B', noteLabel: 'C#4', muted: false, open: false, fret: 2, finger: '3',  seqIdx: 3 },
       { label: 'e', noteLabel: 'E4',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 4 },
+    ],
+  },
+  // ── D major: xx0232 ──
+  {
+    name: 'D', viName: 'Rê trưởng', type: 'MAJOR · D–F#–A', tag: 'major',
+    sequence: D_SEQUENCE,
+    doneText: 'Bạn đã rải đúng hợp âm D!',
+    strings: [
+      { label: 'E', noteLabel: 'E2',  muted: true,  open: false, fret: 0, finger: null, seqIdx: -1 },
+      { label: 'A', noteLabel: 'A2',  muted: true,  open: false, fret: 0, finger: null, seqIdx: -1 },
+      { label: 'D', noteLabel: 'D3',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 0 },
+      { label: 'G', noteLabel: 'A3',  muted: false, open: false, fret: 2, finger: '1',  seqIdx: 1 },
+      { label: 'B', noteLabel: 'D4',  muted: false, open: false, fret: 3, finger: '3',  seqIdx: 2 },
+      { label: 'e', noteLabel: 'F#4', muted: false, open: false, fret: 2, finger: '2',  seqIdx: 3 },
     ],
   },
   // ── F major barre: 133211 ──
