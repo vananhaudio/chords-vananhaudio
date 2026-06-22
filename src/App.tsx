@@ -107,7 +107,7 @@ const ALL_CHORDS: ChordConfig[] = [
       { label: 'D', noteLabel: 'D3',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 2 },
       { label: 'G', noteLabel: 'G3',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 3 },
       { label: 'B', noteLabel: 'B3',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 4 },
-      { label: 'e', noteLabel: 'G4',  muted: false, open: false, fret: 3, finger: '4',  seqIdx: 5 },
+      { label: 'e', noteLabel: 'G4',  muted: false, open: false, fret: 3, finger: '3',  seqIdx: 5 },
     ],
   },
   // ── E major: 022100 ──
@@ -117,8 +117,8 @@ const ALL_CHORDS: ChordConfig[] = [
     doneText: 'Bạn đã rải đúng hợp âm E!',
     strings: [
       { label: 'E', noteLabel: 'E2',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 0 },
-      { label: 'A', noteLabel: 'B2',  muted: false, open: false, fret: 2, finger: '3',  seqIdx: 1 },
-      { label: 'D', noteLabel: 'E3',  muted: false, open: false, fret: 2, finger: '2',  seqIdx: 2 },
+      { label: 'A', noteLabel: 'B2',  muted: false, open: false, fret: 2, finger: '2',  seqIdx: 1 },
+      { label: 'D', noteLabel: 'E3',  muted: false, open: false, fret: 2, finger: '3',  seqIdx: 2 },
       { label: 'G', noteLabel: 'G#3', muted: false, open: false, fret: 1, finger: '1',  seqIdx: 3 },
       { label: 'B', noteLabel: 'B3',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 4 },
       { label: 'e', noteLabel: 'E4',  muted: false, open: true,  fret: 0, finger: null, seqIdx: 5 },
